@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=guidance_faireg
+POSTGRES_USER=sVJAcsBDrxSRoEUWuHbwnznfwKdrsWKr
+POSTGRES_PASSWORD=XZysXe1FYBXB0UjGVVnK3BvLXHf6sTfVBjmwnnqQCWuFWYp9TTK4EE8d6wBL3PfZ
