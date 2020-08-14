@@ -10,10 +10,11 @@ def home(request):
 
 def confirmation(request, _type):
     if _type == "parent":
-        msg = "Félicitation ! Votre compte est bien créé. Dans les jours à venir, " \
-              "nous allons vous faire découvrir les universités béninoises et d'ailleurs " \
-              "pour vos enfants. Vous aurez aussi accès à des conférences d'orientations. " \
-              "Cordialement, l'équipe de E-DEV Technologies."
+        msg = "Félicitation cher parent! Votre compte est bien créé. " \
+              "Dans les jours à venir, nous allons vous faire découvrir " \
+              "les universités béninoises et d'ailleurs. Vous aurez aussi " \
+              "accès à des conférences d'orientations. accompagnez votre " \
+              "enfant dans le choix de son école.Cordialement, l'équipe de E-DEV Technologies"
     else:
         msg = "Félicitation ! Votre compte est bien créé. Dans les jours à venir, " \
               "nous allons vous faire découvrir les universités béninoises et d'ailleurs. " \
