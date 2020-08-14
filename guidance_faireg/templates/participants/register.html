@@ -8,7 +8,10 @@
         <form method="post">
           {% csrf_token %}
           {{ form | crispy }}
-          <button type="submit" class="btn btn-primary">S'inscire</button>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">S'inscire</button>
+            <a class="btn btn-secondary" href="{% url "participants:home" %}">Retour</a>
+          </div>
         </form>
       </div>
     </div>
