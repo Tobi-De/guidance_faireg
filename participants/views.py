@@ -8,6 +8,10 @@ def home(request):
     return render(request, "participants/home.html")
 
 
+def confirmation(request):
+    return render(request, "participants/confirmation.html")
+
+
 class ParentRegisterView(CreateView):
     model = Parent
     fields = [
@@ -19,6 +23,7 @@ class ParentRegisterView(CreateView):
         "country",
         "city",
     ]
+    success_url = "/confirmation"
     template_name = "participants/register.html"
 
 
@@ -35,4 +40,5 @@ class StudentRegisterView(CreateView):
         "country",
         "city",
     ]
+    success_url = "/confirmation"
     template_name = "participants/register.html"
