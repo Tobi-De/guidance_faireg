@@ -5,9 +5,29 @@ from .models import Student, Parent
 
 @admin.register(Parent)
 class ParentAdmin(admin.ModelAdmin):
-    pass
+    search_fields = ["email", "last_name"]
+    list_display = [
+        "last_name",
+        "first_name",
+        "email",
+        "phone_number",
+        "gender",
+        "country",
+        "city",
+    ]
 
 
 @admin.register(Student)
 class StudentAdmin(admin.ModelAdmin):
-    pass
+    search_fields = ["email", "last_name"]
+    list_display = [
+        "last_name",
+        "first_name",
+        "email",
+        "phone_number",
+        "gender",
+        "bachelor_degree",
+        "status",
+        "country",
+        "city",
+    ]

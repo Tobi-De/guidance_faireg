@@ -5,9 +5,13 @@
   <main class="mx-auto mt-5" style="width: 600px;">
     <div class="card">
       <div class="card-body">
-        <p class="text-center big">
-          Vous etes maintenant inscrit
+        <p class="text-justify">
+         {{ msg }}
         </p>
+        <div class="form-group">
+          <a class="btn btn-primary" href="{% url "participants:home" %}">Retour
+          </a>
+        </div>
       </div>
     </div>
   </main>
