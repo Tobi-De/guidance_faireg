@@ -1,11 +1,7 @@
-
-
-
-
 // project specific CSS goes here
 
 ////////////////////////////////
-		//Variables//
+//Variables//
 ////////////////////////////////
 
 // Alert colors
@@ -18,7 +14,7 @@ $dark-pink: #eed3d7;
 $red: #b94a48;
 
 ////////////////////////////////
-		//Alerts//
+//Alerts//
 ////////////////////////////////
 
 // bootstrap alert CSS, translated to the django-standard levels of
@@ -34,4 +30,16 @@ $red: #b94a48;
   background-color: $pink;
   border-color: $dark-pink;
   color: $red;
+}
+
+.asteriskField {
+  display: none;
+}
+
+.body {
+  background-image: url("images/bg4.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
