@@ -8,7 +8,7 @@ class Participant(TimeStampedModel):
     first_name = models.CharField("Prénoms", max_length=120)
     last_name = models.CharField("Nom", max_length=60)
     email = models.EmailField(unique=True)
-    phone_number = models.CharField("Tél", max_length=20)
+    phone_number = models.CharField("Tél", max_length=20, unique=True)
     gender = models.CharField(
         "Sexe", max_length=6, choices=SEXE_CHOICES, default=SEXE_CHOICES.Homme
     )

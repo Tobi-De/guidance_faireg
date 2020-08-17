@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import CreateView
 
+from .forms import ParentRegisterForm, StudentRegisterForm
 from .models import Parent, Student
 
 
@@ -25,31 +26,13 @@ def confirmation(request, _type):
 
 class ParentRegisterView(CreateView):
     model = Parent
-    fields = [
-        "last_name",
-        "first_name",
-        "email",
-        "phone_number",
-        "gender",
-        "country",
-        "city",
-    ]
+    form_class = ParentRegisterForm
     success_url = "/confirmation/parent/"
     template_name = "participants/register.html"
 
 
 class StudentRegisterView(CreateView):
     model = Student
-    fields = [
-        "last_name",
-        "first_name",
-        "email",
-        "phone_number",
-        "gender",
-        "bachelor_degree",
-        "status",
-        "country",
-        "city",
-    ]
+    form_class = StudentRegisterForm
     success_url = "/confirmation/student/"
     template_name = "participants/register.html"
