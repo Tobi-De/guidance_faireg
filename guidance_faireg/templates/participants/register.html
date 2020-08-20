@@ -2,21 +2,26 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-  <main class="mx-auto mt-5 mb-5" style="width: 600px;">
-    <div class="card">
-      <div class="card-body">
-        <form method="post">
-          {% csrf_token %}
-          {{ form | crispy }}
-          <div class="form-group">
-            <button type="submit" class="btn btn-primary">S'inscire</button>
-            <a class="btn btn-secondary" href="{% url "participants:home" %}">Retour</a>
+  <main class="mx-auto mt-5 mb-5">
+    <div class="row justify-content-md-center">
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="card-body">
+            <form method="post">
+              {% csrf_token %}
+              {{ form | crispy }}
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary">S'inscire</button>
+                <a class="btn btn-secondary" href="{% url "participants:home" %}">Retour</a>
+              </div>
+            </form>
+            <hr>
+            <b>Contact:</b> contact@eorientation.bj | 62178364 <br>
+            <p>Veuillez svp nous contacter pour tout problème sur ce site.</p>
           </div>
-        </form>
-        <hr>
-        <b>Contact:</b> contact@eorientation.bj | 62178364 <br>
-        <p>Veuillez svp nous contacter pour tout problème sur ce site.</p>
+        </div>
       </div>
     </div>
+
   </main>
 {% endblock %}

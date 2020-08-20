@@ -2,20 +2,25 @@
 
 {% block content %}
 
-  <main class="mx-auto mt-5" style="width: 600px;">
-    <div class="card">
-      <div class="card-body">
-        <h4 class="text-center"><b>Salon virtuel international d'orientation</b></h4>
-        <p class="text-justify" style="font-size: 20px">
-          Un futur radieux passe par un bon choix de carrière aujourd’hui. Informez-vous et faites-vous guider
-          gratuitement !
-        </p>
-        <div class="powr-countdown-timer" id="909fee1c_1597416335"></div>
-        <script src="https://www.powr.io/powr.js?platform=bootstrap#"></script>
-      </div>
-      <div class="form-group mx-auto">
-        <a class="btn btn-primary" href="{% url "participants:student_register" %}">S'inscrire en tant qu'étudiant</a>
-        <a class="btn btn-primary" href="{% url "participants:parent_register" %}">S'inscrire en tant que Parent</a>
+  <main class="mx-auto mt-5">
+    <div class="row justify-content-md-center">
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="text-center"><b>Salon virtuel international d'orientation</b></h4>
+            <p class="text-justify" style="font-size: 20px">
+              Un futur radieux passe par un bon choix de carrière aujourd’hui. Informez-vous et faites-vous guider
+              gratuitement !
+            </p>
+            <div class="powr-countdown-timer" id="909fee1c_1597416335"></div>
+            <script src="https://www.powr.io/powr.js?platform=bootstrap#"></script>
+          </div>
+          <div class="btn-group btn-group-sm mx-auto mb-2">
+            <a class="btn btn-primary" href="{% url "participants:student_register" %}">S'inscrire en tant
+              qu'étudiant</a>
+            <a class="btn btn-primary" href="{% url "participants:parent_register" %}">S'inscrire en tant que Parent</a>
+          </div>
+        </div>
       </div>
     </div>
   </main>
