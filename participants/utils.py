@@ -17,3 +17,34 @@ def is_valid_email(email):
     if response.get("format_valid") and response.get("mx_found") and response.get("smtp_check"):
         return True
     return False
+
+
+def queryset_to_csv(queryset):
+    # f = StringIO()
+    # fields = queryset.fi
+    # writer = csv.writer(f)
+    # writer.writerow(
+    #     [
+    #         "Nom utilisateur",
+    #         "Nom Propriétaire",
+    #         "Numéro de Police",
+    #         "Montant",
+    #         "Période",
+    #         "Addresse",
+    #     ]
+    # )
+    # for payoff in queryset:
+    #     if not payoff.validate:
+    #         writer.writerow(
+    #             [
+    #                 payoff.user.full_name,
+    #                 payoff.bill.owner_name,
+    #                 payoff.bill.num_police,
+    #                 payoff.amount,
+    #                 payoff.bill.period,
+    #                 payoff.user.address,
+    #             ]
+    #         )
+    # f.seek(0)
+    # return f, nbr_payoff
+    pass

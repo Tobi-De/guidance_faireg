@@ -11,7 +11,7 @@ def home(request):
 
 def confirmation(request, _type):
     if _type == "parent":
-        msg = "Félicitation cher parent! Votre compte est bien créé. " \
+        msg = "Félicitation chère parent! Votre compte est bien créé. " \
               "Dans les jours à venir, nous allons vous faire découvrir " \
               "les universités béninoises et d'ailleurs. Vous aurez aussi " \
               "accès à des conférences d'orientations. accompagnez votre " \

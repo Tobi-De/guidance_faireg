@@ -13,3 +13,97 @@
 .asteriskField {
   display: none;
 }
+
+body {
+  font-family: 'Roboto';
+}
+
+.navbar-brand.logo-text {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 28px;
+  color: white;
+}
+
+.navbar-brand.logo-text:hover {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 28px;
+  color: white;
+}
+
+.sign-in-btn {
+  background: white;
+  color: #ffc107;
+  border: 1px solid white;
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.more-info-btn {
+  background: rgb(69,199,212);
+  color: #ffffff;
+  border: 1px solid white;
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.login-btn {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid white;
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.menu-nav li a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000 !important;
+}
+
+.menu-nav li {
+  margin-right: 50px;
+}
+
+.menu-nav li:last-child {
+  margin-right: 0px;
+}
+
+@media (max-width: 768px) {
+  #navbar-menuitem {
+    display: none;
+  }
+}
+
+.slider-text-area {
+  position: relative;
+}
+
+.slider-text-area::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.89);
+  position: absolute;
+}
+
+.bg-yello {
+  position: relative;
+}
+
+.bg-yello::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #ffc107;
+  position: absolute;
+}
+
+.footer-contact-list li {
+  line-height: 2;
+}
+
