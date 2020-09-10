@@ -6,6 +6,7 @@ from .utils import queryset_to_csv
 
 
 class DownloadCSVMixin:
+    actions = ["download_as_csv"]
 
     @property
     def file_name(self):

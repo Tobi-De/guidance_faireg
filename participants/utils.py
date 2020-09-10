@@ -1,6 +1,10 @@
+import csv
+from io import StringIO
+
 import requests
 
 from config.settings.base import env
+from .models import Student
 
 
 class ApiError(BaseException):
@@ -14,37 +18,31 @@ def is_valid_email(email):
     response = r.json()
     if "success" in response.keys() and not response.get("success"):
         raise ApiError
-    if response.get("format_valid") and response.get("mx_found") and response.get("smtp_check"):
+    if (
+        response.get("format_valid")
+        and response.get("mx_found")
+        and response.get("smtp_check")
+    ):
         return True
     return False
 
 
 def queryset_to_csv(queryset):
-    # f = StringIO()
-    # fields = queryset.fi
-    # writer = csv.writer(f)
-    # writer.writerow(
-    #     [
-    #         "Nom utilisateur",
-    #         "Nom Propriétaire",
-    #         "Numéro de Police",
-    #         "Montant",
-    #         "Période",
-    #         "Addresse",
-    #     ]
-    # )
-    # for payoff in queryset:
-    #     if not payoff.validate:
-    #         writer.writerow(
-    #             [
-    #                 payoff.user.full_name,
-    #                 payoff.bill.owner_name,
-    #                 payoff.bill.num_police,
-    #                 payoff.amount,
-    #                 payoff.bill.period,
-    #                 payoff.user.address,
-    #             ]
-    #         )
-    # f.seek(0)
-    # return f, nbr_payoff
-    pass
+    f = StringIO()
+    fields = [
+        "first_name",
+        "last_name",
+        "gender",
+        "email",
+        "phone_number",
+        "country",
+        "city",
+    ]
+    if isinstance(queryset.first(), Student):
+        fields += ["status", "bachelor_degree"]
+    writer = csv.writer(f)
+    writer.writerow(fields)
+    for obj in queryset:
+        writer.writerow([getattr(obj, field) for field in fields])
+    f.seek(0)
+    return f
