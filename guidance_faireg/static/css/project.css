@@ -18,6 +18,17 @@ body {
   font-family: 'Roboto';
 }
 
+
+.bg {
+  /* The image used */
+  background: url("../images/slide01.png") no-repeat center center fixed;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
 .navbar-brand.logo-text {
   text-transform: uppercase;
   font-weight: 700;

@@ -1,14 +1,10 @@
 {% extends "base.html" %}
 {% load static crispy_forms_tags %}
 
-{#style="background-image: url({% static 'images/bg4.jpg' %});#}
-{#        background-repeat: no-repeat;#}
-{#        background-attachment: fixed;#}
-{#        background-position: center; background-size: cover; "#}
 
 {% block content %}
   <header>
-    <nav class="navbar navbar-light navbar-expand bg-warning">
+    <nav class="navbar navbar-expand-md navbar-light  bg-warning">
       <div class="container-fluid"><a class="navbar-brand logo-text"
                                       href="{% url "participants:home" %}">E-Orientation</a>
         <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span
@@ -24,49 +20,15 @@
               <a class="btn sign-in-btn bg-dark" type="button" href="{% url "participants:student_register" %}">Inscription
                 Etudiant</a>
             </li>
-            {#            <li class="nav-item" role="presentation">#}
-            {#              <button class="btn login-btn" type="button">LOGIN</button>#}
-            {#            </li>#}
           </ul>
         </div>
       </div>
     </nav>
-    <section style="background-image: url({% static 'images/slide01.png' %});">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-5 slider-text-area pl-0" data-aos="fade-right" data-aos-duration="800"
-               data-aos-once="true">
-            <div class="row py-5 px-5">
-              <div class="col py-5">
-                <h1 data-aos="fade-right" data-aos-duration="700" data-aos-delay="400" style="font-weight: bold;">Du 25
-                  Septembre<br>au 04 Novembre</h1>
-              </div>
-            </div>
-            <div class="row py-5 px-5">
-              <div class="col">
-                <h1 class="text-uppercase text-warning" data-aos="fade-up" data-aos-duration="700" data-aos-delay="600"
-                    data-aos-once="true" style="font-weight: bold;font-size: 54px;">Soyez les bienvenues</h1>
-                <h4 data-aos="fade-up" data-aos-duration="700" data-aos-delay="850" data-aos-once="true">au salon
-                  Virtuel
-                  international d’orientation</h4>
-                <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="1000" data-aos-once="true" class="mt-5">
-                  Ce salon vous permettra de répondre à certaines questions fondamentales qui vous tourmentent : quelle
-                  filière dois-choisir, dans quelle école m’inscrire, que puis-je faire selon ma série, comment faire le
-                  bon choix pour échapper au chômage demain. Avec une série de conférences animée par des personnes
-                  ressources, la présentation de plusieurs écoles du Bénin et d’ailleurs et des opportunités de
-                  bourses.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-7"></div>
-        </div>
-      </div>
-    </section>
   </header>
-  <main class="mx-auto mt-5 mb-5">
+  <main class="mx-auto bg">
     <div class="row justify-content-md-center">
       <div class="col-lg-6">
-        <div class="card">
+        <div class="card mt-5 mb-5">
           <div class="card-body">
             <form method="post">
               {% csrf_token %}
@@ -108,14 +70,6 @@
           <h6 class="text-white">Informations pratiques</h6>
           <h6 class="text-white mb-0">Support d'orientation<br></h6>
         </div>
-        {#        <div class="col-xl-3 align-self-center">#}
-        {#          <h4 class="text-white">Information</h4>#}
-        {#          <h6 class="text-white">Home</h6>#}
-        {#          <h6 class="text-white">List of Schools</h6>#}
-        {#          <h6 class="text-white">Why Exibit</h6>#}
-        {#          <h6 class="text-white">Practical Information</h6>#}
-        {#          <h6 class="text-white mb-0">Orientation Stand<br></h6>#}
-        {#        </div>#}
       </div>
     </div>
   </footer>
