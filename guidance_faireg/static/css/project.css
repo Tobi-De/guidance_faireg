@@ -41,6 +41,10 @@ body {
   font-weight: 500;
 }
 
+.sign-in-btn:hover {
+  color: white;
+}
+
 .more-info-btn {
   background: rgb(69,199,212);
   color: #ffffff;
